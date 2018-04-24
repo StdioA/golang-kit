@@ -1,4 +1,4 @@
-FROM micanzhang/golang-testing:1.10
+FROM micanzhang/golang-testing:latest
 
 # build protoc
 ADD build-protoc.sh build-protoc.sh
