@@ -1,4 +1,4 @@
-FROM micanzhang/golang-testing:latest
+FROM micanzhang/golang-testing:1.10
 
 # build protoc
 ADD build-protoc.sh build-protoc.sh
@@ -8,7 +8,6 @@ RUN /bin/sh build-protoc.sh && rm build-protoc.sh
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
 
 # install glide
-# TODO(micanzhang): remove when go1.12 released
 RUN go get -u github.com/Masterminds/glide && rm -rf $GOPATH/src/github.com/Masterminds/glide
 
 # install python3
