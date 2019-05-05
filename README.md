@@ -6,10 +6,10 @@ Docker image includes lot of tools and services for darwin go project.
 
 built in tools and services list:
 
-+ [x] golang 1.9.2
-+ [x] glide
++ [x] golang 1.12
 + [x] gocov
 + [x] golint
++ [x] staticcheck
 + [x] protoc
 
 ## Build

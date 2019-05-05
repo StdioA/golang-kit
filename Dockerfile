@@ -7,10 +7,6 @@ RUN /bin/sh build-protoc.sh && rm build-protoc.sh
 # golang protobuf plugin
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
 
-# install glide
-# TODO(micanzhang): remove when go1.12 released
-RUN go get -u github.com/Masterminds/glide && rm -rf $GOPATH/src/github.com/Masterminds/glide
-
 # install python3
 RUN apk add --no-cache python3 && \
     python3 -m ensurepip && \
