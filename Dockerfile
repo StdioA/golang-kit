@@ -8,7 +8,7 @@ RUN /bin/sh build-protoc.sh && rm build-protoc.sh
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
 
 # install python3
-RUN apt-get install python3 && \
+RUN apt-get install -y python3 && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --upgrade pip setuptools && \
