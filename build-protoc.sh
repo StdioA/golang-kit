@@ -2,7 +2,9 @@
 
 set -e
 # build protoc
-apk add --update autoconf automake libtool curl make g++ unzip
+# https://github.com/protocolbuffers/protobuf/blob/master/src/README.md
+apt-get update
+apt-get install -y autoconf automake libtool curl make g++ unzip
 git clone https://github.com/google/protobuf -b 3.6.x --depth 1
 cd ./protobuf
 git submodule update --init --recursive
@@ -11,4 +13,6 @@ git submodule update --init --recursive
 make
 make check
 make install
+ldconfig
+protoc --version
 cd ../ && rm -rf protobuf
