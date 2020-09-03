@@ -3,6 +3,7 @@ FROM micanzhang/golang-testing:1.14
 # build protoc
 ADD build-protoc.sh build-protoc.sh
 RUN /bin/sh build-protoc.sh && rm build-protoc.sh
+ENV GO111MODULE=on
 
 # golang protobuf plugin
 RUN go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.5 && \
