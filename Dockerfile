@@ -6,9 +6,9 @@ RUN /bin/sh build-protoc.sh && rm build-protoc.sh
 ENV GO111MODULE=on
 
 # golang protobuf plugin
-RUN go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.5 && \
-    go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway && \
-    go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
+RUN go get github.com/golang/protobuf/protoc-gen-go@v1.3.5 && \
+    go get github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway && \
+    go get github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 
 # install python3
 RUN apt-get install -y python3 python3-pip && \
