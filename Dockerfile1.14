@@ -5,7 +5,7 @@ ADD build-protoc.sh build-protoc.sh
 RUN /bin/sh build-protoc.sh && rm build-protoc.sh
 
 # golang protobuf plugin
-RUN go get -u github.com/golang/protobuf/protoc-gen-go && \
+RUN go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.5 && \
     go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway && \
     go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 
